@@ -3,19 +3,18 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.microsoft.azure</groupId>
-  <artifactId>app-service-java-manage-functions</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <artifactId>azure-postgresql-samples</artifactId>
+  <version>1.0-SNAPSHOT</version>
   <name>ConnectAndQueryData.java</name>
-  <description></description>
+  <description>Azure Database for PostgreSQL: Use Java to connect and query data</description>
   <url>https://docs.microsoft.com/en-us/azure/postgresql/connect-java</url>
   <build>
     <plugins>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>exec-maven-plugin</artifactId>
-        <version>1.4.0</version>
         <configuration>
-          <mainClass>com.microsoft.azure.postgresql.samples.ConnectAndQueryData</mainClass>
+          <mainClass>com.microsoft.azure.postgresql.ConnectAndQueryData</mainClass>
         </configuration>
       </plugin>
       <plugin>
@@ -40,7 +39,7 @@
               </descriptorRefs>
               <archive>
                 <manifest>
-                  <mainClass>com.microsoft.azure.postgresql.samples.ConnectAndQueryData.java</mainClass>
+                  <mainClass>com.microsoft.azure.postgresql.ConnectAndQueryData.java</mainClass>
                 </manifest>
               </archive>
             </configuration>
@@ -51,9 +50,9 @@
   </build>
   <dependencies>
     <dependency>
-      <groupId>com.microsoft.azure</groupId>
-      <artifactId>azure</artifactId>
-      <version>1.5.0</version>
+      <groupId>org.postgresql</groupId>
+      <artifactId>postgresql</artifactId>
+      <version>42.2.0.jre7</version>
     </dependency>
     <dependency>
       <groupId>commons-net</groupId>
@@ -62,4 +61,3 @@
     </dependency>
   </dependencies>
 </project>
-
