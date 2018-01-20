@@ -103,7 +103,6 @@ public class ConnectAndQueryData {
         if (connection != null) {
             // Perform some SQL queries over the connection.
             try {
-
                 Statement statement = connection.createStatement();
                 ResultSet results = statement.executeQuery("SELECT * from inventory;");
                 while (results.next()) {
@@ -123,8 +122,6 @@ public class ConnectAndQueryData {
 
     private static void UpdateTable(Connection connection) throws Exception {
         if (connection != null) {
-            System.out.println("Successfully created connection to database.");
-
             // Perform some SQL queries over the connection.
             try {
                 // Modify some data in table.
@@ -145,8 +142,6 @@ public class ConnectAndQueryData {
 
     private static void DeleteTable(Connection connection) throws Exception {
         if (connection != null) {
-            System.out.println("Successfully created connection to database.");
-
             // Perform some SQL queries over the connection.
             try {
                 // Delete some data from table.
